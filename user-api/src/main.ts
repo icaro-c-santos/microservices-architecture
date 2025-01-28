@@ -31,6 +31,9 @@ const initialize = async () => {
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors({
+    origin: "*"
+  });
   await initialize();
   await app.listen(3000);
 }
