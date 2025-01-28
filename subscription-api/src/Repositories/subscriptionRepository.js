@@ -1,15 +1,15 @@
 const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
-    host: 'course-db',
+    host: 'subscription-db',
     user: 'root',
     password: 'root',
-    database: 'course_service'
+    database: 'subscription_db'
 });
 
 exports.getSubscriptions = async (userId) => {
-    const [rows] = await pool.query('SELECT * FROM subscriptions WHERE id = ?', [userId]);
-    return rows[0];
+    const [rows] = await pool.query('SELECT * FROM subscriptions WHERE userId = ?', [userId]);
+    return rows;
 };
 
 exports.initialize = async () => {

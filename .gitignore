@@ -1,8 +1,7 @@
 # compiled output
 /dist
-/course-api/node_modules
-/subscription-api/node_modules
-/user-api/node_modules
+
+user-api/
 # Logs
 logs
 *.log

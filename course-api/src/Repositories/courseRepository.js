@@ -4,7 +4,7 @@ const pool = mysql.createPool({
     host: 'course-db',
     user: 'root',
     password: 'root',
-    database: 'course_service'
+    database: 'course_db'
 });
 
 exports.findById = async (id) => {
@@ -18,10 +18,7 @@ exports.findById = async (id) => {
 };
 exports.initialize = async () => {
     try {
-        // Verificar se a tabela 'courses' existe
         const [tables] = await pool.query("SHOW TABLES LIKE 'courses'");
-        
-        // Se a tabela não existir, cria a tabela e insere os cursos
         if (tables.length === 0) {
             const createTableQuery = `
                 CREATE TABLE courses (

@@ -5,7 +5,7 @@ services:
     ports:
       - "8003:3000"
     volumes:
-      - .:/app
+      - ./src/:/usr/src/app/src/
     depends_on:
       - subscription-db
   subscription-db:
