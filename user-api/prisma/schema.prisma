@@ -1,0 +1,19 @@
+datasource db {
+  provider = "postgresql"  // Ou outro banco de dados, como MySQL, SQLite
+  url      = "postgres://postgres:password@db:5432/mydb"
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+model User {
+  id            String      @id
+  name          String
+  lastName      String
+  birthDate     DateTime
+  maritalStatus String
+  city          String
+  state         String
+}
