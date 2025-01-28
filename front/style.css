@@ -66,3 +66,48 @@ a:hover {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
+
+.card {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+
+#error {
+    display: none;
+    margin: auto;
+    text-align: center;
+}
+#error p {
+    text-align: center;
+    color: #cc0000;
+    font-size: 28px;
+}
+
+
+#fim{
+    width: 5px;
+    height: 50px;
+}

@@ -5,7 +5,7 @@ services:
   api:
     build: .
     ports:
-      - "8003:3000"
+      - "8007:3000"
     volumes:
       - ./prisma:/app/prisma
       - ./dist:/app/dist
