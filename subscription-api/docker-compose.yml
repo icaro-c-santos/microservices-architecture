@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  subscription-api:
+    build: .
+    ports:
+      - "8003:3000"
+    volumes:
+      - ./src/:/usr/src/app/src/
+    depends_on:
+      - subscription-db
+  subscription-db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: subscription_db
+    ports:
+      - "3309:3306"
+    volumes:
+      - subscription-db-data:/var/lib/mysql
+
+volumes:
+  subscription-db-data:

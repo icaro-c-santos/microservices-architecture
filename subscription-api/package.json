@@ -1,0 +1,21 @@
+{
+    "name": "course-api",
+    "version": "1.0.0",
+    "description": "API for managing courses",
+    "main": "src/server.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "dev": "nodemon src/server.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "mysql2": "^2.2.5"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    },
+    "author": "Your Name",
+    "license": "MIT"
+}
